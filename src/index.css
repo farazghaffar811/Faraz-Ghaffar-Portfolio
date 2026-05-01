@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-ai-cyan: #00f2ff;
+  --color-ai-purple: #7000ff;
+  --color-ai-black: #050505;
+  --color-ai-gray: #111111;
+}
+
+@layer base {
+  body {
+    @apply bg-ai-black text-white antialiased font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+  }
+
+  .bg-grid-white {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .mask-radial {
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+}
+
